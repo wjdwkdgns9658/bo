@@ -43,12 +43,52 @@
 
     <!-- 커스터마이징 -->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/개별이름수정하기.css">
+    <link rel="stylesheet" href="./css/jjh.css">
     <!-- 팀원들의 스타일 -->
 </head>
 <body>
     <!-- 공통컨텐츠 : header, footer, aside -->
+    <!-- .container.d-flex>.col-6.bg-light>h2{공지사항}+ul>li*5>a{공지사항제목들이나옵니다.} -->
+    <div class="container d-flex" id="tabsection">
+        <div class="col-6 bg-light noticelist d-flex flex-column justify-content-center align-items-center">
+            <h2>공지사항</h2>
+            <ul>
+                <li><a href="">공지사항제목들이나옵니다.</a></li>
+                <li><a href="">공지사항제목들이나옵니다.</a></li>
+                <li><a href="">공지사항제목들이나옵니다.</a></li>
+                <li><a href="">공지사항제목들이나옵니다.</a></li>
+                <li><a href="">공지사항제목들이나옵니다.</a></li>
+            </ul>
+        </div>
+    <div class="col-6 border" id="swipersection">
+        <div class="swiper">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide bg-warning d-flex justify-content-center align-items-center">Slide 1</div>
+                <div class="swiper-slide bg-dark text-white d-flex justify-content-center align-items-center">Slide 2</div>
+                <div class="swiper-slide bg-light d-flex justify-content-center align-items-center">Slide 3</div>
+            </div>
+ 
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
   
+<script>
+    const swiper = new Swiper('.swiper', {
+                                loop: true,
+                                pagination: {
+                                    el: '.swiper-pagination',
+                                    clickable: true,
+                                
+                                },
+                                autoplay: {
+                                        delay: 2500,
+                                        disableOnInteraction: false,
+                                },
+
+                    });
+</script>
+
 </body>
 </html>
 
